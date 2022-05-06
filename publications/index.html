@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Jayakrishna Menon Vadayath | blog</title>
+    <title>Jayakrishna Menon Vadayath | publications</title>
     <meta name="author" content="Jayakrishna Menon  Vadayath" />
     <meta name="description" content="Lorem ipsum.
 " />
@@ -33,7 +33,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://jkrshnmenon.github.io/blog/">
+    <link rel="canonical" href="https://jkrshnmenon.github.io/publications/">
     
     <!-- Dark Mode -->
     
@@ -73,8 +73,8 @@
               
 
               <!-- Other pages -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/publications/">publications</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/publications/">publications<span class="sr-only">(current)</span></a>
               </li>
 
               <!-- Toogle theme mode -->
@@ -92,21 +92,89 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <div class="post">
+      <!-- page.html -->
+        <div class="post">
 
-  <div class="header-bar">
-    <h1></h1>
-    <h2></h2>
-  </div>
+          <header class="post-header">
+            <h1 class="post-title">publications</h1>
+            <p class="post-description"></p>
+          </header>
 
+          <article>
+            <!-- _pages/publications.md -->
+<div class="publications">
+  <h2 class="year">2022</h2>
+  <ol class="bibliography"><li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr"></div>
 
-  <ul class="post-list">
-    
-  </ul>
+        <!-- Entry bib key -->
+        <div id="vadayath_arbiter_22" class="col-sm-8">
+        
+          <!-- Title -->
+          <div class="title">Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs</div>
+          <!-- Author -->
+          <div class="author">Vadayath, Jayakrishna, Eckert, Moritz, Zeng, Kyle, Weideman, Nicolaas, Menon, Gokulkrishna Praveen, Fratantonio, Yanick, Balzarotti, Davide, Doupé, Adam, Bao, Tiffany, Wang, Ruoyu, Hauser, Christophe, and Shoshitaishvili, Yan
+          </div>
 
-  
+          <!-- Journal/Book title and date -->
+          <div class="periodical">
+            <em>In 31st USENIX Security Symposium (USENIX Security 22)</em> Aug 2022
+          </div>
+        
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>In spite of their effectiveness in the context of vulnerability discovery, current state-of-the-art binary program analysis approaches are limited by inherent trade-offs between accuracy and scalability. In this paper, we identify a set of vulnerability properties that can aid both static and dynamic vulnerability detection techniques, improving the precision of the former and the scalability of the latter. By carefully integrating static and dynamic techniques, we detect vulnerabilities that exhibit these properties in real-world programs at a large scale. We implemented our technique, making several advancements in the analysis of binary code, and created a prototype called ARBITER. We demonstrate the effectiveness of our approach with a large-scale evaluation on four common vulnerability classes: CWE-131 (Incorrect Calculation of Buffer Size), CWE-252 (Unchecked Return Value), CWE-134 (Uncontrolled Format String), and CWE-337 (Predictable Seed in Pseudo-Random Number Generator). We evaluated our approach on more than 76,516 x86-64 binaries in the Ubuntu repositories and discovered new vulnerabilities, including a flaw inserted into programs during compilation.</p>
+          </div>
+        </div>
+      </div>
+</li></ol>
+
+  <h2 class="year">2019</h2>
+  <ol class="bibliography"><li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr"></div>
+
+        <!-- Entry bib key -->
+        <div id="10.1145/3359789.3359820" class="col-sm-8">
+        
+          <!-- Title -->
+          <div class="title">Sleak: Automating Address Space Layout Derandomization</div>
+          <!-- Author -->
+          <div class="author">Hauser, Christophe, Menon, Jayakrishna, Shoshitaishvili, Yan, Wang, Ruoyu, Vigna, Giovanni, and Kruegel, Christopher
+          </div>
+
+          <!-- Journal/Book title and date -->
+          <div class="periodical">
+            <em>In Proceedings of the 35th Annual Computer Security Applications Conference</em> Aug 2019
+          </div>
+        
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>We present a novel approach to automatically recover information about the address space layout of remote processes in the presence of Address Space Layout Randomization (ASLR). Our system, dubbed Sleak, performs static analysis and symbolic execution of binary executable programs, and identifies program paths and input parameters leading to partial (i.e., only a few bits) or complete (i.e., the whole address) information disclosure vulnerabilities, revealing addresses of known objects of the target service or application. Sleak takes, as input, the binary executable program, and generates a symbolic expression for each program output that leaks information about the addresses of objects, such as stack variables, heap structures, or function pointers. By comparing these expressions with the concrete output of a remote process executing the same binary program image, our system is able to recover from a few bits to whole addresses of objects of the target application or service. Discovering the address of a single object in the target application is often enough to guess the layout of entire sections of the address space, which can be leveraged by attackers to bypass ASLR.</p>
+          </div>
+        </div>
+      </div>
+</li></ol>
+
 
 </div>
+
+          </article>
+
+        </div>
 
     </div>
 
