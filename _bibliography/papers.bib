@@ -1,0 +1,46 @@
+---
+---
+
+@inproceedings{vadayath_arbiter_22,
+    title = "Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs",
+    author = "Vadayath, Jayakrishna 
+    and Eckert, Moritz 
+    and Zeng, Kyle 
+    and Weideman, Nicolaas 
+    and Menon, Gokulkrishna Praveen 
+    and Fratantonio, Yanick 
+    and Balzarotti, Davide 
+    and Doup{\'e}, Adam 
+    and Bao, Tiffany 
+    and Wang, Ruoyu 
+    and Hauser, Christophe 
+    and Shoshitaishvili, Yan",
+    booktitle = "31st USENIX Security Symposium (USENIX Security 22)",
+    month = August,
+    year = "2022",
+    address = "Boston, MA",
+    publisher = "USENIX Association",
+    url = "https://www.usenix.org/conference/usenixsecurity22/presentation/vadayath",
+    abstract = "In spite of their effectiveness in the context of vulnerability discovery, current state-of-the-art binary program analysis approaches are limited by inherent trade-offs between accuracy and scalability. In this paper, we identify a set of vulnerability properties that can aid both static and dynamic vulnerability detection techniques, improving the precision of the former and the scalability of the latter. By carefully integrating static and dynamic techniques, we detect vulnerabilities that exhibit these properties in real-world programs at a large scale. We implemented our technique, making several advancements in the analysis of binary code, and created a prototype called ARBITER. We demonstrate the effectiveness of our approach with a large-scale evaluation on four common vulnerability classes: CWE-131 (Incorrect Calculation of Buffer Size), CWE-252 (Unchecked Return Value), CWE-134 (Uncontrolled Format String), and CWE-337 (Predictable Seed in Pseudo-Random Number Generator). We evaluated our approach on more than 76,516 x86-64 binaries in the Ubuntu repositories and discovered new vulnerabilities, including a flaw inserted into programs during compilation.",
+    selected={true},
+}
+
+@inproceedings{10.1145/3359789.3359820,
+    author = "Hauser, Christophe and Menon, Jayakrishna and Shoshitaishvili, Yan and Wang, Ruoyu and Vigna, Giovanni and Kruegel, Christopher",
+    title = "Sleak: Automating Address Space Layout Derandomization",
+    year = "2019",
+    isbn = "9781450376280",
+    publisher = "Association for Computing Machinery",
+    address = "New York, NY, USA",
+    url = "https://doi.org/10.1145/3359789.3359820",
+    doi = "10.1145/3359789.3359820",
+    abstract = "We present a novel approach to automatically recover information about the address space layout of remote processes in the presence of Address Space Layout Randomization (ASLR). Our system, dubbed Sleak, performs static analysis and symbolic execution of binary executable programs, and identifies program paths and input parameters leading to partial (i.e., only a few bits) or complete (i.e., the whole address) information disclosure vulnerabilities, revealing addresses of known objects of the target service or application. Sleak takes, as input, the binary executable program, and generates a symbolic expression for each program output that leaks information about the addresses of objects, such as stack variables, heap structures, or function pointers. By comparing these expressions with the concrete output of a remote process executing the same binary program image, our system is able to recover from a few bits to whole addresses of objects of the target application or service. Discovering the address of a single object in the target application is often enough to guess the layout of entire sections of the address space, which can be leveraged by attackers to bypass ASLR.",
+    booktitle = "Proceedings of the 35th Annual Computer Security Applications Conference",
+    pages = "190–202",
+    numpages = "13",
+    keywords = "binary program analysis, vulnerability discovery, information leakage",
+    location = "San Juan, Puerto Rico, USA",
+    series = "ACSAC '19",
+    selected={true},
+}
+
