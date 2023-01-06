@@ -1,34 +1,52 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Eckert":
+  - firstname: ["Moritz", "M."]
+    url: 
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Zeng":
+  - firstname: ["Kyle", "K."]
+    url: https://kylebot.net/
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Weideman":
+  - firstname: ["Nicolaas", "N."]
+    url: https://steel.isi.edu/members/nicolaas/
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Menon":
+  - firstname: ["Gokulkrishna Praveen", "G."]
+    url: https://gokulkrishna.com/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Fratantonio":
+  - firstname: ["Yanick", "Y."]
+    url: https://reyammer.io/
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"Balzarotti":
+  - firstname: ["Davide", "D."]
+    url: https://www.s3.eurecom.fr/~balzarot/
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"Doupé":
+  - firstname: ["Adam", "A."]
+    url: https://adamdoupe.com/
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"Bao":
+  - firstname: ["Tiffany", "T."]
+    url: https://www.tiffanybao.com/
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"Wang":
+  - firstname: ["Ruoyu", "R."]
+    url: https://ruoyuwang.me/
+
+"Hauser":
+  - firstname: ["Christophe", "C."]
+    url: https://bass.isi.edu/members/chris/
+
+"Shoshitaishvili":
+  - firstname: ["Yan", "Y."]
+    url: https://yancomm.net/
+
+"Vigna":
+  - firstname: ["Giovanni", "G."]
+    url: https://sites.cs.ucsb.edu/~vigna/
+
+"Kruegel":
+  - firstname: ["Christopher", "C."]
+    url: https://sites.cs.ucsb.edu/~chris/
+

@@ -2,96 +2,139 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: Jayakrishna Menon Vadayath
+    - name: Occupation
+      value: Pursuing Ph.D. in Computer Science
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Ph.D. in Computer Science
+      institution: Arizona State University, Arizona, USA
+      year: 2019 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - GPA 4.0
+        - Research in Cyber Security
+    - title: Bachelor of Technology in Computer Science and Engineering
+      institution: Amrita University, Kerala, India
+      year: 2014 - 2018
       description:
-        - Description 1.
-        - Description 2.
+        - GPA 9.27/10.00
+        - Graduated with distinction
 
-- title: Experience
+- title: Research Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Research Assistant
+      institution: SEFCOM Lab at Arizona State University, Arizona, USA
+      year: Aug 2019 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Working with Dr. Yan Shoshitaishvili and Dr. Ruoyu ”Fish” Wang.
+        - title: Research topics
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+            - Binary Exploitation.
+            - Fuzzing.
+            - Symbolic Execution.
+            - Static Binary Analysis.
+            - Reverse Engineering.
+    - title: Intern
+      institution: ForAllSecure, Pennsylvania, USA
+      year: May 2022 - Aug 2022
       description:
-        - Description 1.
-        - Description 2.
+        - Worked with Thanassis Avgerinos and Maxwell Koo.
+        - Worked on implementing a snapshot fuzzer for virtual machines.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Research Scholar
+      institution: SEFCOM Lab at Arizona State University, Arizona, USA
+      year: Oct 2018 - May 2019
       description:
+        - Worked under the supervision of Dr. Yan Shoshitaishvili and Dr. Ruoyu ”Fish” Wang.
+        - Analyzing binary application software for identifying vulnerabilities
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    - title: Research Scholar
+      institution: ISI at University of Southern California, California, USA
+      year: Feb 2018 - Oct 2018
+      description:
+        - Worked under the supervision of Dr. Christophe Hauser.
+        - Identifying potential leak of pointers through static binary analysis and symbolic execution
+
+- title: Research Publications
+  type: time_table
+  contents:
+    - title: '<a href="https://www.usenix.org/conference/usenixsecurity22/presentation/vadayath">Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs</a>'
+      institution: 31st USENIX Security Symposium (USENIX Security 22)
+      year: 2022
+      description: <b>Jayakrishna Vadayath</b>, Moritz Eckert, Kyle Zeng, Nicolaas Weideman, Gokulkrishna Praveen Menon, Yanick Fratantonio, Davide Balzarotti, Adam Doupé, Tiffany Bao, Ruoyu Wang, Christophe Hauser and Yan Shoshitaishvili
+    - title: '<a href="https://dl.acm.org/doi/abs/10.1145/3359789.3359820">Sleak: Automating Address Space Layout Derandomization</a>'
+      institution: The 35th Annual Computer Security Applications Conference
+      year: 2019
+      description: Christophe Hauser, <b>Jayakrishna Menon</b>, Yan Shoshitaishvili, Ruoyu Wang, Giovanni Vigna and Christopher Kruegel
+    - title: '<a href="https://ieeexplore.ieee.org/abstract/document/8424665">A binary analysis approach to retrofit security in input parsing routines</a>'
+      institution: The Fifth Workshop on Language-Theoretic Security (IEEE CS Security & Privacy Workshops)
+      year: 2018
+      description: <b>Jayakrishna Menon</b>, Christophe Hauser, Yan Shoshitaishvili and Stephen Schwab
+
+- title: Teaching Experience
+  type: time_table
+  contents:
+    - title: "CSE545: Software Security at Arizona State University"
+      year: Aug 2021 - Dec 2021
+      description: 
+        - Teaching Assistant
+        - Assisted Dr. Ruoyu "Fish" Wang
+        - Primary duties were helping students with assignments and coursework
+    - title: "CSE365: Information Assurance at Arizona State University"
+      year: Aug 2020 - Dec 2020
+      description: 
+        - Teaching Assistant
+        - Assisted Dr. Ruoyu "Fish" Wang
+        - Primary duties were helping students with assignments and coursework
+
 
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: <a href="https://github.com/jkrshnmenon/arbiter">Arbiter</a>
+      year: 
+      description: A scalable and precise hybrid vulnerability analysis framework
+    - title: <a href="https://github.com/jkrshnmenon/phpil">PuzzIL</a>
+      year: 
+      description: An intermediate language fuzzer for PHP
 
-- title: Honors and Awards
+- title: Vulnerability Research
   type: time_table
   contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+    - title: Synology NAS 0-day
+      year: 2022
+      description: Pwn2Own
+    - title: CVE-2018-18311
+      year: 2018
+      description: "Heap overflow in Perl interpreter, CVSS 3.0 score: 9.8"
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
 
-- title: Other Interests
-  type: list
+- title: Other Achievements
+  type: time_table
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - title: DEFCON CTF Finals
+      year: 2022
+      description: 13th rank globally with team Shellphish
+
+    - title: HITB Pro CTF
+      year: 2021
+      description: 10th rank globally with team Shellphish
+
+    - title: DEFCON CTF Finals
+      year: 2020
+      description: 7th rank globally with team Shellphish
+
+    - title: Dragon CTF Finals
+      year: 2019
+      description: 11th rank globaly with team Pwndevils
+
+    - title: CSAW Embedded Security Challenge
+      year: 2019
+      description: First runners up with team Pwndevils
+
+    - title: CSAW CTF Finals (India region)
+      year: 2016
+      description: First runners up with team bi0s

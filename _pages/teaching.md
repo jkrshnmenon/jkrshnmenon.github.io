@@ -1,12 +1,9 @@
 ---
-layout: page
-permalink: /teaching/
+layout: page                   
+permalink: /teaching/          
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
-nav: true
-nav_order: 6
+description: Courses that I have assisted in teaching
+nav: true                      
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
-
-Organize your courses by years, topics, or universities, however you like!
+I have assisted [Dr. Ruoyu (Fish) Wang](https://ruoyuwang.me/) in teaching the course CSE 365: Information Assurance during Fall 2020 semester and the course CSE 545: Software Security in the Fall 2021 semester. My primary duties were helping students with assignments and coursework.

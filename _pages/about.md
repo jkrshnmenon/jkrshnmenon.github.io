@@ -1,25 +1,33 @@
 ---
-layout: about
+layout: about                  
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+# subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  align: right                 
+  image: jay_pic.jpg          
+#   address: >                 
+#     <p>555 your office number</p>   
+#     <p>123 your address street</p>  
+#     <p>Your City, State 12345</p>   
 
-news: true # includes a list of news items
+# news: true  # includes a list of news items 
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: true  # includes social icons at the bottom of the page 
 ---
+  
+I am a PhD student at [School of Computing and Augmented Intelligence](https://scai.engineering.asu.edu/) lab at [Arizona State University](https://www.asu.edu/).
+  
+I currently work at [SEFCOM](https://sefcom.asu.edu) with some really amazing people and my primary advisor is [Dr. Yan Shoshitaishvili](https://yancomm.net/).
+I also actively work with [Dr. Ruoyu (Fish) Wang](https://ruoyuwang.me/), [Dr. Tiffany Bao](https://www.tiffanybao.com/) and [Dr. Adam Doupé](https://adamdoupe.com/).
+  
+My research focuses on automated vulnerability analysis on application software.
+My areas of interest are static analysis, symbolic execution and fuzzing. 
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Prior to starting my PhD in Fall 2019, I had interned at the [Information Sciences Institute](https://www.isi.edu/) at [University of Southern California](https://www.usc.edu/) under the supervision of [Dr. Christophe Hauser](https://bass.isi.edu/members/chris/) and at SEFCOM where I currently work as a Research Assistant.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I have also interned at [ForAllSecure Inc](https://forallsecure.com/) during the Summer 2022 where I worked with [Thanassis Avgerinos](https://users.ece.cmu.edu/~aavgerin/) and many other amazing people.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I started playing CTF's as a part of [Team bi0s](https://bi0s.in/) in 2014 and I currently play with [Shellphish](https://shellphish.net/).
+I primarily focus on Pwning/Exploitation challenges, but I occasionally try out some Reverse Engineering challenges as well.
