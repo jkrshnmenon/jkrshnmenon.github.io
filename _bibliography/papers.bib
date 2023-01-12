@@ -46,3 +46,13 @@
     selected={true},
 }
 
+@INPROCEEDINGS{8424665,
+  author = "Menon, Jayakrishna and Hauser, Christophe and Shoshitaishvili, Yan and Schwab, Stephen",
+  title = "A Binary Analysis Approach to Retrofit Security in Input Parsing Routines",
+  year = "2018",
+  booktitle = "2018 IEEE Security and Privacy Workshops (SPW)",
+  pages = "306-322",
+  abstract = "In spite of numerous attempts to mitigate memory corruption vulnerabilities in low-level code over the years, those remain the most common vector of software exploitation today. A common cause of such vulnerabilities is the presence of errors in string manipulation, which are often found in input parsers, where the format of input data is verified and eventually converted into an internal program representation. This process, if done manually in an ad-hoc manner, is error prone and easily leads to unsafe and potentially exploitable behavior. While principled approaches to input validation exist, such as those based on parser generators (e.g., Lex [20] and Ragel [28]), these require a formalization of the input grammar, which is not always a straightforward process and tends to dissuade programmers. As a result, a large portion of input parsing routines as found in commodity software is still implemented in an ad-hoc way, causing numerous security issues. We propose to address this problem from a post-development perspective, by targeting software presenting security risks in opaque, closed-source environments where software components have already been deployed and integrated, and where re-implementation is not an option (e.g., as part of an embedded device’s proprietary firmware). Our system is able to effectively detect vulnerability patterns in binary software and to retrofit security mechanisms preventing exploitation. In a semi-automated setting, it was able to discover an unknown security bug.",
+  doi = "10.1109/SPW.2018.00049",
+  selected={false}
+}
