@@ -61,6 +61,10 @@
 - title: Research Publications
   type: time_table
   contents:
+    - title: '<a href="https://www.usenix.org/conference/usenixsecurity23/presentation/tay">Greenhouse: Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation</a>'
+      institution: 32nd USENIX Security Symposium (USENIX Security 23)
+      year: 2023
+      description: Hui Jun Tay, Kyle Zeng, <b>Jayakrishna Menon Vadayath</b>, Arvind S Raj, Audrey Dutcher, Tejesh Reddy, Wil Gibbs, Zion Leonahenahe Basque, Fangzhou Dong, Zack Smith, Adam Doup{\'e}, Tiffany Bao, Yan Shoshitaishvili, Ruoyu Wang"
     - title: '<a href="https://www.usenix.org/conference/usenixsecurity22/presentation/vadayath">Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs</a>'
       institution: 31st USENIX Security Symposium (USENIX Security 22)
       year: 2022
