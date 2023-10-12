@@ -282,8 +282,8 @@ display_tags: ['heap', 'ctf', 'stack'] # this tags will be dispalyed on the fron
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Vadayath, Menon]
+  first_name: [Jayakrishna, Jayakrishna Menon, J.]
 
   style: apa
   locale: en
