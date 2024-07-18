@@ -264,7 +264,6 @@ This template has a built-in light/dark mode. It detects the user preferred colo
 
 ### CV
 
-
 What this means is, if there is no resume data defined in [\_config.yml](_config.yml) and loaded via a json file, it will load the contents of [\_data/cv.yml](_data/cv.yml) as fallback.
 
 [![CV Preview](readme_preview/cv.png)](https://alshedivat.github.io/al-folio/cv/)
