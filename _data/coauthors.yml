@@ -50,3 +50,29 @@
   - firstname: ["Christopher", "C."]
     url: https://sites.cs.ucsb.edu/~chris/
 
+"Gibbs":
+  - firstname: ["Wil", "W."]
+
+"Raj":
+  - firstname: ["Arvind S", "A."]
+
+"Miller":
+  - firstname: ["Justin", "J."]
+
+"Ajayan":
+  - firstname: ["Akshay", "A."]
+
+"Basque":
+  - firstname: ["Zion", "Z."]
+
+"Dutcher":
+  - firstname: ["Audrey", "A."]
+
+"Dong":
+  - firstname: ["Fangzhou", "F."]
+
+"Ford":
+  - firstname: ["Irina", "I."]
+
+"Soneji":
+  - firstname: ["Ananta", "A."]

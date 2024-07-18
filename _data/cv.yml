@@ -61,10 +61,18 @@
 - title: Research Publications
   type: time_table
   contents:
+    - title: '<a href="https://www.usenix.org/conference/usenixsecurity24/presentation/gibbs">Operation Mango: Scalable Discovery of Taint-Style Vulnerabilities in Binary Firmware Services</a>'
+      institution: 33rd USENIX Security Symposium (USENIX Security 24)
+      year: 2024
+      description: Wil Gibbs, Arvind S Raj, <b>Jayakrishna Menon Vadayath</b>, Hui Jun Tay, Justin Miller, Akshay Ajayan, Zion Leonahenahe Basque, Audrey Dutcher, Fangzhou Dong, Xavier Maso, Giovanni Vigna, Christopher Kruegel, Adam Doup{\'e}, Yan Shoshitaishvili, Ruoyu Wang
+    - title: '<a href="https://anantasoneji.com/publications/ford2024watching.pdf">"Watching over the shoulder of a professional": Why hackers make mistakes and how they fix them</a>'
+      institution: 45th IEEE Symposium on Security and Privacy
+      year: 2024
+      description: Irina Ford, Ananta Soneji, Faris Bugra Kokulu, <b>Jayakrishna Vadayath</b>, Zion Leonahenahe Basque, Gaurav Vipat, Adam Doupé, Ruoyu Wang, Gail-Joon Ahn, Tiffany Bao, Yan Shoshitaishvili
     - title: '<a href="https://www.usenix.org/conference/usenixsecurity23/presentation/tay">Greenhouse: Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation</a>'
       institution: 32nd USENIX Security Symposium (USENIX Security 23)
       year: 2023
-      description: Hui Jun Tay, Kyle Zeng, <b>Jayakrishna Menon Vadayath</b>, Arvind S Raj, Audrey Dutcher, Tejesh Reddy, Wil Gibbs, Zion Leonahenahe Basque, Fangzhou Dong, Zack Smith, Adam Doup{\'e}, Tiffany Bao, Yan Shoshitaishvili, Ruoyu Wang"
+      description: Hui Jun Tay, Kyle Zeng, <b>Jayakrishna Menon Vadayath</b>, Arvind S Raj, Audrey Dutcher, Tejesh Reddy, Wil Gibbs, Zion Leonahenahe Basque, Fangzhou Dong, Zack Smith, Adam Doup{\'e}, Tiffany Bao, Yan Shoshitaishvili, Ruoyu Wang
     - title: '<a href="https://www.usenix.org/conference/usenixsecurity22/presentation/vadayath">Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs</a>'
       institution: 31st USENIX Security Symposium (USENIX Security 22)
       year: 2022
@@ -94,7 +102,6 @@
         - Assisted Dr. Ruoyu "Fish" Wang
         - Primary duties were helping students with assignments and coursework
 
-
 - title: Open Source Projects
   type: time_table
   contents:
@@ -108,6 +115,9 @@
 - title: Vulnerability Research
   type: time_table
   contents:
+    - title: Wyze Camera 0-day
+      year: 2023
+      description: Pwn2Own
     - title: Synology NAS 0-day
       year: 2022
       description: Pwn2Own
@@ -115,10 +125,13 @@
       year: 2018
       description: "Heap overflow in Perl interpreter, CVSS 3.0 score: 9.8"
 
-
 - title: Other Achievements
   type: time_table
   contents:
+    - title: DEFCON CTF Finals
+      year: 2023
+      description: 11th rank globally with team Shellphish
+
     - title: DEFCON CTF Finals
       year: 2022
       description: 13th rank globally with team Shellphish

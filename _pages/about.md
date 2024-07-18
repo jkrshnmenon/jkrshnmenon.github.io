@@ -29,5 +29,5 @@ Prior to starting my PhD in Fall 2019, I had interned at the [Information Scienc
 
 I have also interned at [ForAllSecure Inc](https://forallsecure.com/) during the Summer 2022 where I worked with [Thanassis Avgerinos](https://users.ece.cmu.edu/~aavgerin/) and many other amazing people.
 
-I started playing CTF's as a part of [Team bi0s](https://bi0s.in/) in 2014 and I currently play with [Shellphish](https://shellphish.net/).
+I started playing CTF's as a part of [Team bi0s](https://bi0s.in/) in 2014 and I currently play with [Shellphish](https://shellphish.net/) where I have been the co-captain since 2023.
 I primarily focus on Pwning/Exploitation challenges, but I occasionally try out some Reverse Engineering challenges as well.
