@@ -86,6 +86,16 @@
       year: 2018
       description: <b>Jayakrishna Menon</b>, Christophe Hauser, Yan Shoshitaishvili and Stephen Schwab
 
+- title: Professional Activities
+  type: time_table
+  contents:
+    - title: ACM Conference on Computer and Communications Security (CCS '24)
+      year: 2024
+      description: Artifact Evaluation Committee Member
+    - title: 18th USENIX WOOT Conference on Offensive Technologies (WOOT '24)
+      year: 2024
+      description: Artifact Evaluation Committee Member
+
 - title: Teaching Experience
   type: time_table
   contents:
