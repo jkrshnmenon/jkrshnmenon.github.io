@@ -138,6 +138,9 @@
 - title: Other Achievements
   type: time_table
   contents:
+    - title: DARPA AI Cyber Challenge
+      year: 2024
+      description: '<a href="https://aicyberchallenge.com/smallbusinesstrack/">Small Business Track Competition Winners with Shellphish</a>'
     - title: DEFCON CTF Finals
       year: 2023
       description: 11th rank globally with team Shellphish
