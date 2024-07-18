@@ -91,13 +91,13 @@
   contents:
     - title: "CSE545: Software Security at Arizona State University"
       year: Aug 2021 - Dec 2021
-      description: 
+      description:
         - Teaching Assistant
         - Assisted Dr. Ruoyu "Fish" Wang
         - Primary duties were helping students with assignments and coursework
     - title: "CSE365: Information Assurance at Arizona State University"
       year: Aug 2020 - Dec 2020
-      description: 
+      description:
         - Teaching Assistant
         - Assisted Dr. Ruoyu "Fish" Wang
         - Primary duties were helping students with assignments and coursework
@@ -106,10 +106,10 @@
   type: time_table
   contents:
     - title: <a href="https://github.com/jkrshnmenon/arbiter">Arbiter</a>
-      year: 
+      year:
       description: A scalable and precise hybrid vulnerability analysis framework
     - title: <a href="https://github.com/jkrshnmenon/phpil">PuzzIL</a>
-      year: 
+      year:
       description: An intermediate language fuzzer for PHP
 
 - title: Vulnerability Research
