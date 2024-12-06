@@ -27,7 +27,9 @@ My areas of interest are static analysis, symbolic execution and fuzzing.
 
 Prior to starting my PhD in Fall 2019, I had interned at the [Information Sciences Institute](https://www.isi.edu/) at [University of Southern California](https://www.usc.edu/) under the supervision of [Dr. Christophe Hauser](https://bass.isi.edu/members/chris/) and at SEFCOM where I currently work as a Research Assistant.
 
-I have also interned at [ForAllSecure Inc](https://forallsecure.com/) during the Summer 2022 where I worked with [Thanassis Avgerinos](https://users.ece.cmu.edu/~aavgerin/) and many other amazing people.
+I have also interned at [ForAllSecure Inc](https://forallsecure.com/) during the Summer 2022 and Summer 2023 where I worked with [Thanassis Avgerinos](https://users.ece.cmu.edu/~aavgerin/) and many other amazing people.
 
 I started playing CTF's as a part of [Team bi0s](https://bi0s.in/) in 2014 and I currently play with [Shellphish](https://shellphish.net/) where I have been the co-captain since 2023.
 I primarily focus on Pwning/Exploitation challenges, but I occasionally try out some Reverse Engineering challenges as well.
+
+I am also a part of the Shellphish founded AIxCC team where we won $2 Million from DARPA as finalists in the [AIxCC competition](https://aicyberchallenge.com/) with our Cyber Reasoning System (CRS) [ARTIPHISHELL](https://support.shellphish.net/).

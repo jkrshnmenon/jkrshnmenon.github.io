@@ -37,6 +37,14 @@
             - Symbolic Execution.
             - Static Binary Analysis.
             - Reverse Engineering.
+
+    - title: Intern
+      institution: ForAllSecure, Pennsylvania, USA
+      year: May 2023 - Aug 2023
+      description:
+        - Worked with Thanassis Avgerinos and Maxwell Koo.
+        - Worked on implementing a snapshot fuzzer for router firmware.
+
     - title: Intern
       institution: ForAllSecure, Pennsylvania, USA
       year: May 2022 - Aug 2022
@@ -61,10 +69,14 @@
 - title: Research Publications
   type: time_table
   contents:
+    - title: '<a href="https://arvindsraj.com/publication/2024-flakjack/flakjack-ccs24.pdf">Fuzz to the Future: Uncovering Occluded Future Vulnerabilities via Robust Fuzzing</a>'
+      institution: 31st ACM Conference on Computer and Communications Security (CCS 24)
+      year: 2024
+      description: Arvind S Raj, Wil Gibbs, Fangzhou Dong, <b>Jayakrishna Menon Vadayath</b>, Michael Tompkins, Steven Wirsz, Yibo Liu, Zhenghao Hu, Chang Zhu, Gokul Krishna, Brendan Dolan-Gavitt, Adam Doupé, Ruoyu Wang, Yan Shoshitaishvili, Tiffany Bao
     - title: '<a href="https://www.usenix.org/conference/usenixsecurity24/presentation/gibbs">Operation Mango: Scalable Discovery of Taint-Style Vulnerabilities in Binary Firmware Services</a>'
       institution: 33rd USENIX Security Symposium (USENIX Security 24)
       year: 2024
-      description: Wil Gibbs, Arvind S Raj, <b>Jayakrishna Menon Vadayath</b>, Hui Jun Tay, Justin Miller, Akshay Ajayan, Zion Leonahenahe Basque, Audrey Dutcher, Fangzhou Dong, Xavier Maso, Giovanni Vigna, Christopher Kruegel, Adam Doup{\'e}, Yan Shoshitaishvili, Ruoyu Wang
+      description: Wil Gibbs, Arvind S Raj, <b>Jayakrishna Menon Vadayath</b>, Hui Jun Tay, Justin Miller, Akshay Ajayan, Zion Leonahenahe Basque, Audrey Dutcher, Fangzhou Dong, Xavier Maso, Giovanni Vigna, Christopher Kruegel, Adam Doupé, Yan Shoshitaishvili, Ruoyu Wang
     - title: '<a href="https://anantasoneji.com/publications/ford2024watching.pdf">"Watching over the shoulder of a professional": Why hackers make mistakes and how they fix them</a>'
       institution: 45th IEEE Symposium on Security and Privacy
       year: 2024
@@ -72,7 +84,7 @@
     - title: '<a href="https://www.usenix.org/conference/usenixsecurity23/presentation/tay">Greenhouse: Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation</a>'
       institution: 32nd USENIX Security Symposium (USENIX Security 23)
       year: 2023
-      description: Hui Jun Tay, Kyle Zeng, <b>Jayakrishna Menon Vadayath</b>, Arvind S Raj, Audrey Dutcher, Tejesh Reddy, Wil Gibbs, Zion Leonahenahe Basque, Fangzhou Dong, Zack Smith, Adam Doup{\'e}, Tiffany Bao, Yan Shoshitaishvili, Ruoyu Wang
+      description: Hui Jun Tay, Kyle Zeng, <b>Jayakrishna Menon Vadayath</b>, Arvind S Raj, Audrey Dutcher, Tejesh Reddy, Wil Gibbs, Zion Leonahenahe Basque, Fangzhou Dong, Zack Smith, Adam Doupé, Tiffany Bao, Yan Shoshitaishvili, Ruoyu Wang
     - title: '<a href="https://www.usenix.org/conference/usenixsecurity22/presentation/vadayath">Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs</a>'
       institution: 31st USENIX Security Symposium (USENIX Security 22)
       year: 2022
@@ -138,6 +150,9 @@
 - title: Other Achievements
   type: time_table
   contents:
+    - title: DARPA AI Cyber Challenge
+      year: 2024
+      description: '<a href="https://www.darpa.mil/news-events/2024-08-11">AIxCC Finalist with Shellphish</a>'
     - title: DARPA AI Cyber Challenge
       year: 2024
       description: '<a href="https://aicyberchallenge.com/smallbusinesstrack/">Small Business Track Competition Winners with Shellphish</a>'
