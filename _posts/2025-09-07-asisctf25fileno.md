@@ -352,5 +352,5 @@ It also turns out that the VM has a libc inside it.
 So we don't need to compile the exploit statically which significantly reduces the size of the binary.
 Still, with some `gzip` + `base64` magic, @zolutal was able to run the exploit on the remote machine and got the flag.
 
-Here's the final exploit code <a href="/assets/c/asis/exploit.c">Exploit</a>
+The final exploit code is available <a href="/assets/c/asis/exploit.c">here</a>.
 And the challenge files are available <a href="/assets/binary/asis/vuln.tar.gz">here</a>.
