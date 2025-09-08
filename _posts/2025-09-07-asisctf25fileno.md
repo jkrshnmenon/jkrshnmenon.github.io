@@ -354,3 +354,16 @@ Still, with some `gzip` + `base64` magic, @zolutal was able to run the exploit o
 
 The final exploit code is available <a href="/assets/c/asis/exploit.c">here</a>.
 And the challenge files are available <a href="/assets/binary/asis/vuln.tar.gz">here</a>.
+
+
+## Extra Credit
+After the CTF, I saw @kylebot and @zolutal talk about other writeups for this challenge and @kylebot mentioned that some writeup managed to use the CPU Entry Area.
+Apparently, there's a special instruction called `sgdt` which can return the pointer to the randomized CPU Entry Area (thus defeating KASLR).
+But, on modern kernels (<6.2), this instruction is not allowed because of the 11th bit in the `CR4` register called `UMIP` (User-Mode Instruction Prevention).
+However, this mitigation isn't implemented in QEMU (when its using TCG) and so it can be used to leak the CPU Entry Area address.
+Their solution involved storing the fake `struct seq_file` in the CPU Entry Area, followed by using the `sgdt` instruction to get the address of the fake structure which is then used to overwrite the `private_data` pointer.
+
+Additionally, this challenge would not panic on warnings, and so it would have been possible to just leak a kernel pointer using a warning.
+Maybe I'll think of these the next time I try a kernel challenge.
+
+I recommend reading their writeup which is available <a href="https://kqx.io/writeups/fileno/">here</a>.
