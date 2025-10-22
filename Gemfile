@@ -13,6 +13,8 @@ group :jekyll_plugins do
     gem 'jekyll-paginate-v2'
     gem 'jekyll-regex-replace'
     gem 'jekyll-scholar'
+    # Required on Ruby 3.4+ where observer was moved out of the stdlib
+    gem 'observer'
     gem 'jekyll-sitemap'
     gem 'jekyll-tabs'
     gem 'jekyll-toc'
