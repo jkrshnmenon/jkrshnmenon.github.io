@@ -4,14 +4,14 @@
     - name: Full Name
       value: Jayakrishna Menon Vadayath
     - name: Occupation
-      value: Pursuing Ph.D. in Computer Science
+      value: Co-Founder at Artiphishell Inc
 
 - title: Education
   type: time_table
   contents:
     - title: Ph.D. in Computer Science
       institution: Arizona State University, Arizona, USA
-      year: 2019 - Present
+      year: 2019 - 2026
       description:
         - GPA 4.0
         - Research in Cyber Security
@@ -22,12 +22,21 @@
         - GPA 9.27/10.00
         - Graduated with distinction
 
+- title: Work Experience
+  type: time_table
+  contents:
+    - title: Co-Founder
+      institution: Artiphishell Inc, California, USA
+      year: May 2026 - Present
+      description:
+        - Co-founded Artiphishell Inc, a cybersecurity startup focused on automatic verification of security issues using AI.
+
 - title: Research Experience
   type: time_table
   contents:
     - title: Research Assistant
       institution: SEFCOM Lab at Arizona State University, Arizona, USA
-      year: Aug 2019 - Present
+      year: Aug 2019 - May 2026
       description:
         - Working with Dr. Yan Shoshitaishvili and Dr. Ruoyu ”Fish” Wang.
         - title: Research topics
@@ -101,12 +110,27 @@
 - title: Professional Activities
   type: time_table
   contents:
+    - title: IEEE Transactions on Dependable and Secure Computing
+      year: 2026
+      description: Program Committee Member
+    - title: Network and Distributed System Security Symposium (NDSS '26)
+      year: 2026
+      description: Artifact Evaluation Committee Member
     - title: ACM Conference on Computer and Communications Security (CCS '24)
       year: 2024
       description: Artifact Evaluation Committee Member
     - title: 18th USENIX WOOT Conference on Offensive Technologies (WOOT '24)
       year: 2024
       description: Artifact Evaluation Committee Member
+
+- title: Leadership Experience
+  type: time_table
+  contents:
+    - title: Co-Captain, Shellphish CTF Team
+      year: 2023 - 2026
+      description:
+        - Led one of the world's top competitive CTF teams
+        - Coordinated team strategy and participation in international CTF competitions
 
 - title: Teaching Experience
   type: time_table
@@ -150,6 +174,9 @@
 - title: Other Achievements
   type: time_table
   contents:
+    - title: DARPA AI Cyber Challenge
+      year: 2025
+      description: Ranked 5th in AIxCC Finals with team Shellphish
     - title: DARPA AI Cyber Challenge
       year: 2024
       description: '<a href="https://www.darpa.mil/news-events/2024-08-11">AIxCC Finalist with Shellphish</a>'
